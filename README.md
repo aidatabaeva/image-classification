@@ -13,9 +13,12 @@ The data is sourced from Mendeley Data (https://data.mendeley.com/datasets/rscbj
 ### Objective
 Find an appropriate classification model that classifies images with high accuracy and recall.
 
+### Summarized Approach
+I used traditional classification algorithms such as SVM and KNN to classify preprocessed images into 2 groups: normal and pneumonia. To improve processing time I attempted a dimensionality reduction technique ISOMAP suitable for image data. I then ran fit classification models to compressed and original data. In addition, I tested an open-source classification model from HuggingFace (https://huggingface.co/lxyuan/vit-xray-pneumonia-classification) on the same dataset. This model is a fine-tuned version of google/vit-base-patch16-224-in21k on the chest x-ray classification dataset.
+
 ### Results
+![Untitled](https://github.com/aidatabaeva/image-classification/assets/121254366/8089fc9c-333b-4439-8039-2ea04351480f)
 
-
-
+The selection of the model will depend on the business priority. There is a model that saves processing time, one that maximizes accuracy, and one that maximizes recall. Given the nature of medical problems (false positives are better than false negatives), I will assume that recall is of a higher priority. The difference in the performance of NN model and the Traditional model is not very significant, therefore a traditional SVM can be used for this particular classification problem.
 
 [1] Kermany, Daniel; Zhang, Kang; Goldbaum, Michael (2018), “Labeled Optical Coherence Tomography (OCT) and Chest X-Ray Images for Classification”, Mendeley Data, V2, doi: 10.17632/rscbjbr9sj.2

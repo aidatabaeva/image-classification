@@ -24,7 +24,9 @@ The selection of the model depends on the business priority. There is a model th
 In this context, the performance difference between the neural network (NN) model and the traditional model is not very significant. Therefore, a traditional SVM can be effectively used for this particular classification problem, ensuring high recall while maintaining overall accuracy.
 
 **Business Priority:** The choice of model depends on what is prioritized — processing time, accuracy, or recall.
+
 **Medical Context:** In medical diagnostics, false negatives (missed detections) can be more dangerous than false positives. Therefore, recall is crucial.
+
 **Model Selection:** Although there might be a slight performance difference between a neural network and a traditional model, the traditional SVM is a suitable choice due to its balance of high recall and accuracy.
 
 [1] Kermany, Daniel; Zhang, Kang; Goldbaum, Michael (2018), “Labeled Optical Coherence Tomography (OCT) and Chest X-Ray Images for Classification”, Mendeley Data, V2, doi: 10.17632/rscbjbr9sj.2

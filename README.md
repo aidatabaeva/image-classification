@@ -14,11 +14,17 @@ The data is sourced from Mendeley Data (https://data.mendeley.com/datasets/rscbj
 Find an appropriate classification model that classifies images with high accuracy and recall.
 
 ### Summarized Approach
-I used traditional classification algorithms such as SVM and KNN to classify preprocessed images into 2 groups: normal and pneumonia. To improve processing time I attempted a dimensionality reduction technique ISOMAP suitable for image data. I then ran fit classification models to compressed and original data. In addition, I tested an open-source classification model from HuggingFace (https://huggingface.co/lxyuan/vit-xray-pneumonia-classification) on the same dataset. This model is a fine-tuned version of google/vit-base-patch16-224-in21k on the chest x-ray classification dataset.
+I used traditional classification algorithms such as SVM and KNN to classify preprocessed images into 2 groups: normal and pneumonia. To improve processing time I attempted a dimensionality reduction technique ISOMAP suitable for image data. I then fit classification models to compressed and original data. In addition, I tested an open-source classification model from HuggingFace (https://huggingface.co/lxyuan/vit-xray-pneumonia-classification) on the same dataset. This model is a fine-tuned version of google/vit-base-patch16-224-in21k on the chest x-ray classification dataset.
 
 ### Results
 ![Untitled](https://github.com/aidatabaeva/image-classification/assets/121254366/8089fc9c-333b-4439-8039-2ea04351480f)
 
-The selection of the model will depend on the business priority. There is a model that saves processing time, one that maximizes accuracy, and one that maximizes recall. Given the nature of medical problems (false positives are better than false negatives), I will assume that recall is of a higher priority. The difference in the performance of NN model and the Traditional model is not very significant, therefore a traditional SVM can be used for this particular classification problem.
+The selection of the model depends on the business priority. There is a model that saves processing time, one that maximizes accuracy, and one that maximizes recall. Given the nature of medical problems — where false positives are often more acceptable than false negatives because the diagnosis is usually followed by an additional exam — recall should be given higher priority.
+
+In this context, the performance difference between the neural network (NN) model and the traditional model is not very significant. Therefore, a traditional SVM can be effectively used for this particular classification problem, ensuring high recall while maintaining overall accuracy.
+
+**Business Priority:** The choice of model depends on what is prioritized — processing time, accuracy, or recall.
+**Medical Context:** In medical diagnostics, false negatives (missed detections) can be more dangerous than false positives. Therefore, recall is crucial.
+**Model Selection:** Although there might be a slight performance difference between a neural network and a traditional model, the traditional SVM is a suitable choice due to its balance of high recall and accuracy.
 
 [1] Kermany, Daniel; Zhang, Kang; Goldbaum, Michael (2018), “Labeled Optical Coherence Tomography (OCT) and Chest X-Ray Images for Classification”, Mendeley Data, V2, doi: 10.17632/rscbjbr9sj.2
